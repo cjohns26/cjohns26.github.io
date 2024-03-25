@@ -12,7 +12,18 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload" >
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YWSGX6FCS"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-9YWSGX6FCS');
+	</script>
+
+	<body class="is-preload" onload="checkOrigin()" >
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
@@ -116,6 +127,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function checkOrigin(){
+					var qrCode = '?fromQRCode';
+					var check = location.search;
+					if ( qrCode == check ) {
+						//save data from user
+					}
+				}		
+			</script>
 
 	</body>
 </html>
